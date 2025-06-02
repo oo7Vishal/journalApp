@@ -1,0 +1,20 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://aaddii:aaddii123@cluster0.69ux2h8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  servlet:
+    context-path: /journal
+
+#logging:
+#  level:
+#    net:
+#      vishal: DEBUG
+
+
+#logging:
+#  level:
+#    root: ERROR
