@@ -33,6 +33,33 @@ weather:
       port: 16010
       password: IoWqcgk08LDMJzXXWsuYRUEBtdzVZtc6
 
+
+  kafka:
+    bootstrap-servers: ${KAFKA_SERVERS}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: net.vishal.journalApp.model;
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='X' password='X';
+      session:
+        timeout:
+          ms: 45000
+
+
 #  redis:
 #    uri: redis-cli -u redis://default:IoWqcgk08LDMJzXXWsuYRUEBtdzVZtc6@redis-16010.crce179.ap-south-1-1.ec2.redns.redis-cloud.com:16010
 #
