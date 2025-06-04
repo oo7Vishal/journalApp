@@ -1,0 +1,55 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://aaddii:aaddii123@cluster0.69ux2h8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+
+server:
+  servlet:
+    context-path: /journal
+
+
+weather:
+  api:
+    key: 490318874fa3e2724373bc3015e43659
+
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tripathivishal917@gmail.com
+    password: qthy zksr niqz pmea
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  redis:
+    data:
+      host: redis-16010.crce179.ap-south-1-1.ec2.redns.redis-cloud.com
+      port: 16010
+      password: IoWqcgk08LDMJzXXWsuYRUEBtdzVZtc6
+
+#  redis:
+#    uri: redis-cli -u redis://default:IoWqcgk08LDMJzXXWsuYRUEBtdzVZtc6@redis-16010.crce179.ap-south-1-1.ec2.redns.redis-cloud.com:16010
+#
+
+
+
+
+
+
+
+
+#logging:
+#  level:
+#    net:
+#      vishal: DEBUG
+
+
+#logging:
+#  level:
+#    root: ERROR
